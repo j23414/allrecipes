@@ -35,7 +35,6 @@ ingred	14231	b'3 tablespoons chopped fresh cilantro'	Mexico
 ingred	14231	b'2 roma (plum) tomatoes, diced'	Mexico
 ingred	14231	b'1 teaspoon minced garlic'	Mexico
 ingred	14231	b'1 pinch ground cayenne pepper (optional)'	Mexico
-website	https://allrecipes.com/recipe/15840	Mexico
 website	https://allrecipes.com/recipe/16700	Mexico
 recipe	16700	Salsa Chicken	Mexico
 ingred	16700	b'4 skinless, boneless chicken breast halves'	Mexico
