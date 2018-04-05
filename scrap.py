@@ -32,8 +32,34 @@ def scrape_recipe(br, year, idnumber,f):
 # ============================= Main
 # Open browser
 br=webdriver.Firefox() #opens Firefox browser 
-br.get('https://www.allrecipes.com/recipes/728/world-cuisine/latin-american/mexican')
-year="Mexico"
+
+# Choose a country, or add to the list
+#year="Mexico"
+#br.get('https://www.allrecipes.com/recipes/728/world-cuisine/latin-american/mexican')
+#year="Africa"
+#br.get('https://www.allrecipes.com/recipes/226/world-cuisine/african')
+#year="England"
+#br.get('https://www.allrecipes.com/recipes/705/world-cuisine/european/uk-and-ireland/english')
+#year="China"
+#br.get('https://www.allrecipes.com/recipes/695/world-cuisine/asian/chinese')
+#year="Philippines"
+#br.get('https://www.allrecipes.com/recipes/696/world-cuisine/asian/filipino')
+#year="France"
+#br.get('https://www.allrecipes.com/recipes/721/world-cuisine/european/french')
+#year="Germany"
+#br.get('https://www.allrecipes.com/recipes/722/world-cuisine/european/german')
+#year="India"
+#br.get('https://www.allrecipes.com/recipes/233/world-cuisine/asian/indian')
+#year="Italy"
+#br.get('https://www.allrecipes.com/recipes/723/world-cuisine/european/italian')
+#year="Japan"
+#br.get('https://www.allrecipes.com/recipes/699/world-cuisine/asian/japanese/')
+#year="Korea"
+#br.get('https://www.allrecipes.com/recipes/700/world-cuisine/asian/korean')
+#year="Pakistani"
+#br.get('https://www.allrecipes.com/recipes/15974/world-cuisine/asian/pakistani')
+year="Russia"
+br.get('https://www.allrecipes.com/recipes/716/world-cuisine/european/eastern-european/russian')
 
 # Scrape URLS for recipes
 urls = br.find_elements(By.CLASS_NAME, "favorite")   
