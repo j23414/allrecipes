@@ -1,6 +1,13 @@
 # allrecipes
 
-Pull recipe ingredients by country. Python code modified from [here](https://nycdatascience.com/blog/student-works/recipes-scraping-top-20-recipes-allrecipes/). I've removed the MongoDB dependency and substationally refactored the code for my purposes.
+Pull recipe ingredients by country. Python code modified from [here](https://nycdatascience.com/blog/student-works/recipes-scraping-top-20-recipes-allrecipes/). I've removed the MongoDB dependency and substantially refactored the code for my purposes.
+
+**dependencies**
+
+* python3
+* python3 modules: selenium, numpy
+* [Firefox](https://www.mozilla.org/en-US/firefox/new/)
+* [geckodriver](https://github.com/mozilla/geckodriver/releases) - place executable in path 
 
 ## let's get scraping
 Choose the country of interest by uncommenting their corresponding two lines in **scrap.py**. I've chosen Mexico from the list below:
