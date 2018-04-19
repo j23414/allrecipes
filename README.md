@@ -12,7 +12,7 @@ Pull recipe ingredients by country. Python code modified from [here](https://nyc
 See [wiki](https://github.com/j23414/allrecipes/wiki/Installation) for more detailed install instructions.
 
 ## let's get scraping
-Choose the country of interest by uncommenting their corresponding 3 lines in **scrape.py**. I've chosen Mexico and Africa from the list below:
+Choose country (or countries) of interest by uncommenting their corresponding lines in **scrape.py**. I've chosen Mexico and Africa from the list below:
 
 ```
 ...
