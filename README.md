@@ -32,21 +32,21 @@ Then run **scrape.py** to fetch recipes from the AllRecipes country's page and g
 $ ./scrape.py
 website	https://allrecipes.com/recipe/14231	Mexico
 recipe	14231	Guacamole	Mexico
-ingred	Guacamole	14231	b'3 avocados - peeled, pitted, and mashed'	Mexico
-ingred	Guacamole	14231	b'1 lime, juiced'	Mexico
-ingred	Guacamole	14231	b'1 teaspoon salt'	Mexico
-ingred	Guacamole	14231	b'1/2 cup diced onion'	Mexico
-ingred	Guacamole	14231	b'3 tablespoons chopped fresh cilantro'	Mexico
-ingred	Guacamole	14231	b'2 roma (plum) tomatoes, diced'	Mexico
-ingred	Guacamole	14231	b'1 teaspoon minced garlic'	Mexico
-ingred	Guacamole	14231	b'1 pinch ground cayenne pepper (optional)'	Mexico
+ingred	Guacamole	14231	3 avocados - peeled, pitted, and mashed	Mexico
+ingred	Guacamole	14231	1 lime, juiced	Mexico
+ingred	Guacamole	14231	1 teaspoon salt	Mexico
+ingred	Guacamole	14231	1/2 cup diced onion	Mexico
+ingred	Guacamole	14231	3 tablespoons chopped fresh cilantro	Mexico
+ingred	Guacamole	14231	2 roma (plum) tomatoes, diced	Mexico
+ingred	Guacamole	14231	1 teaspoon minced garlic	Mexico
+ingred	Guacamole	14231	1 pinch ground cayenne pepper (optional)	Mexico
 website	https://allrecipes.com/recipe/16700	Mexico
 recipe	16700	Salsa Chicken	Mexico
-ingred	Salsa Chicken	16700	b'4 skinless, boneless chicken breast halves'	Mexico
-ingred	Salsa Chicken	16700	b'4 teaspoons taco seasoning mix'	Mexico
-ingred	Salsa Chicken	16700	b'1 cup salsa'	Mexico
-ingred	Salsa Chicken	16700	b'1 cup shredded Cheddar cheese'	Mexico
-ingred	Salsa Chicken	16700	b'2 tablespoons sour cream (optional)'	Mexico
+ingred	Salsa Chicken	16700	4 skinless, boneless chicken breast halves	Mexico
+ingred	Salsa Chicken	16700	4 teaspoons taco seasoning mix	Mexico
+ingred	Salsa Chicken	16700	1 cup salsa	Mexico
+ingred	Salsa Chicken	16700	1 cup shredded Cheddar cheese	Mexico
+ingred	Salsa Chicken	16700	2 tablespoons sour cream (optional)	Mexico
 website	https://allrecipes.com/recipe/16881	Mexico
 ...
 ==== Saved to Mexico.txt
@@ -57,26 +57,19 @@ The ingredients list will be saved to a textfile (e.g. Mexico.txt, Africa.txt).
 
 ```
 $ head Mexico.txt
-ingred	Addictive Sweet Potato Burritos	13954	b'1 tablespoon vegetable oil'	Mexico
-ingred	Addictive Sweet Potato Burritos	13954	b'1 onion, chopped'	Mexico
-ingred	Addictive Sweet Potato Burritos	13954	b'4 cloves garlic, minced'	Mexico
-ingred	Addictive Sweet Potato Burritos	13954	b'6 cups canned kidney beans, drained'	Mexico
-ingred	Addictive Sweet Potato Burritos	13954	b'2 cups water'	Mexico
-ingred	Addictive Sweet Potato Burritos	13954	b'3 tablespoons chili powder'	Mexico
-ingred	Addictive Sweet Potato Burritos	13954	b'4 teaspoons prepared mustard'	Mexico
-ingred	Addictive Sweet Potato Burritos	13954	b'2 teaspoons ground cumin'	Mexico
-ingred	Addictive Sweet Potato Burritos	13954	b'1 pinch cayenne pepper, or to taste'	Mexico
-ingred	Addictive Sweet Potato Burritos	13954	b'3 tablespoons soy sauce'	Mexico
-```
-
-### Remove the `b'` and `'` surrounding ingredient names
-
-```
-$ cat Mexico.txt | sed "s/b'//g" | sed "s/'//g" > temp.txt
-$ mv temp.txt Mexico.txt
+ingred	Addictive Sweet Potato Burritos	13954	1 tablespoon vegetable oil	Mexico
+ingred	Addictive Sweet Potato Burritos	13954	1 onion, chopped	Mexico
+ingred	Addictive Sweet Potato Burritos	13954	4 cloves garlic, minced		Mexico
+ingred	Addictive Sweet Potato Burritos	13954	6 cups canned kidney beans, drained	Mexico
+ingred	Addictive Sweet Potato Burritos	13954	2 cups water	Mexico
+ingred	Addictive Sweet Potato Burritos	13954	3 tablespoons chili powder	Mexico
+ingred	Addictive Sweet Potato Burritos	13954	4 teaspoons prepared mustard	Mexico
+ingred	Addictive Sweet Potato Burritos	13954	2 teaspoons ground cumin	Mexico
+ingred	Addictive Sweet Potato Burritos	13954	1 pinch cayenne pepper, or to taste	Mexico
+ingred	Addictive Sweet Potato Burritos	13954	3 tablespoons soy sauce	Mexico
 ```
 
 ## room for improvement
 
-* Track down why `b'` is added to the ingredient names and remove
-* Autoclose the AllRecipes "do you want to provide feedback" popup window. Right now the user can close it manually. If the popup is not closed, then ingredients for the current recipe is not scrapped and result in empty strings.
+* Autoclose the AllRecipes "do you want to provide feedback" popup window. Right now the user can close it manually. If the popup is not closed, then ingredients for the current recipe is not scraped and result in empty strings. Does not affect later scraped recipes.
+* May be able to remove the Firefox and geckodriver dependency. Would require text processing the html file (instead of popping a window)

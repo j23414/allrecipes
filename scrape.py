@@ -46,7 +46,7 @@ def scrape_recipe(br, year, idnumber,f):
     ingredients = []
     for x in np.arange(len(ingred)-1):
         #if (str(ingred[x].text) == '')
-        ingredients.append(str(ingred[x].text.encode('ascii', 'ignore')))
+        ingredients.append(str(ingred[x].text.encode('ascii', 'ignore')).replace("b'","").replace("'",""))
     
     for ingr in ingredients:
         print('ingred\t'+rtitle+'\t'+idnumber+'\t'+ingr+'\t'+year)
