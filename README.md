@@ -12,30 +12,24 @@ Pull recipe ingredients by country. Python code modified from [here](https://nyc
 See [wiki](https://github.com/j23414/allrecipes/wiki/Installation) for more detailed install instructions.
 
 ## let's get scraping
-Choose the country of interest by uncommenting their corresponding 3 lines in **scrap.py**. I've chosen Mexico from the list below:
+Choose the country of interest by uncommenting their corresponding 3 lines in **scrape.py**. I've chosen Mexico and Africa from the list below:
 
 ```
 ...
-# Choose a country, or add to the list
-year="Mexico"
-br.get('https://www.allrecipes.com/recipes/728/world-cuisine/latin-american/mexican')
-probe_world_cuisine(year,br)
-#year="Africa"
-#br.get('https://www.allrecipes.com/recipes/226/world-cuisine/african')
-#probe_world_cuisine(year,br)
-#year="England"
-#br.get('https://www.allrecipes.com/recipes/705/world-cuisine/european/uk-and-ireland/english')
-#probe_world_cuisine(year,br)
-#year="China"
-#br.get('https://www.allrecipes.com/recipes/695/world-cuisine/asian/chinese')
-#probe_world_cuisine(year,br)
+# Choose country (or countries) by uncommenting their line (or lines)
+year=[]
+year.append(['Mexico','https://www.allrecipes.com/recipes/728/world-cuisine/latin-american/mexican'])
+year.append(['Africa','https://www.allrecipes.com/recipes/226/world-cuisine/african'])
+#year.append(['England','https://www.allrecipes.com/recipes/705/world-cuisine/european/uk-and-ireland/english'])
+#year.append(['China"','https://www.allrecipes.com/recipes/695/world-cuisine/asian/chinese'])
+#year.append(['Philippines','https://www.allrecipes.com/recipes/696/world-cuisine/asian/filipino'])
 ...
 ```
 
-Then run **scrap.py** to fetch recipes from the AllRecipes country's page and get their list of ingredients. Two Mexican recipes shown below.
+Then run **scrape.py** to fetch recipes from the AllRecipes country's page and get their list of ingredients. Two Mexican recipes shown below.
 
 ```
-$ ./scrap.py
+$ ./scrape.py
 website	https://allrecipes.com/recipe/14231	Mexico
 recipe	14231	Guacamole	Mexico
 ingred	Guacamole	14231	b'3 avocados - peeled, pitted, and mashed'	Mexico
@@ -56,9 +50,10 @@ ingred	Salsa Chicken	16700	b'2 tablespoons sour cream (optional)'	Mexico
 website	https://allrecipes.com/recipe/16881	Mexico
 ...
 ==== Saved to Mexico.txt
+...
 ```
 
-The ingredients list will be saved to a textfile (e.g. Mexico.txt). 
+The ingredients list will be saved to a textfile (e.g. Mexico.txt, Africa.txt). 
 
 ```
 $ head Mexico.txt
@@ -83,6 +78,5 @@ $ mv temp.txt Mexico.txt
 
 ## room for improvement
 
-* Loopify to fetch multiple countries
 * Track down why `b'` is added to the ingredient names and remove
 * Autoclose the AllRecipes "do you want to provide feedback" popup window. Right now the user can close it manually. If the popup is not closed, then ingredients for the current recipe is not scrapped and result in empty strings.
