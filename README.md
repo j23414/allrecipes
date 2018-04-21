@@ -1,6 +1,6 @@
 # allrecipes
 
-Pull recipe ingredients by country. Python code modified from [here](https://nycdatascience.com/blog/student-works/recipes-scraping-top-20-recipes-allrecipes/). I've removed the MongoDB dependency and substantially refactored the code for my purposes.
+Pull recipe ingredients by country. Python code modified from [here](https://nycdatascience.com/blog/student-works/recipes-scraping-top-20-recipes-allrecipes/). I've removed the MongoDB dependency and substantially refactored the code for my purposes. The recipe ingredients were used to create recipe-phylogenetic trees for a [EEOB 563 Molecular Phylogeny](https://isu-molphyl.github.io/EEOB563-Spring2018/) project. The project repo can be found at [https://github.com/mazeller/EEOB563-Final-Project](https://github.com/mazeller/EEOB563-Final-Project).
 
 **dependencies**
 
@@ -12,7 +12,7 @@ Pull recipe ingredients by country. Python code modified from [here](https://nyc
 See [wiki](https://github.com/j23414/allrecipes/wiki/Installation) for more detailed install instructions.
 
 ## let's get scraping
-Choose country (or countries) of interest by uncommenting their corresponding lines in **scrape.py**. I've chosen Mexico and Africa from the list below:
+Choose the country of interest by uncommenting their corresponding 3 lines in **scrape.py**. I've chosen Mexico and Africa from the list below:
 
 ```
 ...
