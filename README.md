@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/j23414/allrecipes.svg?branch=master)](https://travis-ci.org/j23414/allrecipes)
+
 # allrecipes
 
 Pull recipe ingredients by country. Python code modified from [here](https://nycdatascience.com/blog/student-works/recipes-scraping-top-20-recipes-allrecipes/). I've removed the MongoDB dependency and substantially refactored the code for my purposes. The recipe ingredients were used to create recipe-phylogenetic trees for a [EEOB 563 Molecular Phylogeny](https://isu-molphyl.github.io/EEOB563-Spring2018/) project. The project repo can be found at [https://github.com/mazeller/EEOB563-Final-Project](https://github.com/mazeller/EEOB563-Final-Project).

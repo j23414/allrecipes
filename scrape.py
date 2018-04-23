@@ -59,7 +59,7 @@ br=webdriver.Firefox() #opens Firefox browser
 # Choose country (or countries) by uncommenting their line (or lines)
 year=[]
 year.append(['Mexico','https://www.allrecipes.com/recipes/728/world-cuisine/latin-american/mexican'])
-year.append(['Africa','https://www.allrecipes.com/recipes/226/world-cuisine/african'])
+#year.append(['Africa','https://www.allrecipes.com/recipes/226/world-cuisine/african'])
 #year.append(['England','https://www.allrecipes.com/recipes/705/world-cuisine/european/uk-and-ireland/english'])
 #year.append(['China"','https://www.allrecipes.com/recipes/695/world-cuisine/asian/chinese'])
 #year.append(['Philippines','https://www.allrecipes.com/recipes/696/world-cuisine/asian/filipino'])
